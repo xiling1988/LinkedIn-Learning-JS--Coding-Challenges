@@ -41,3 +41,28 @@ sur.restock = 4;
 sur.sell = 15;
 
 console.log(sur);
+
+////////////////// CHALLENGE 2 - MOVIE OBJECT ///////////////////
+
+class Movie {
+  constructor(title, director, genre, releaseYear, rating) {
+    this.title = title;
+    this.director = director;
+    this.genre = genre;
+    this.releaseYear = releaseYear;
+    this.rating = rating;
+  }
+  get overview() {
+    return `${this.title}, a ${this.genre} film directed by ${this.director} was released in ${this.releaseYear}. It recieved a rating of ${this.rating}.`;
+  }
+}
+
+const pulpFiction = new Movie(
+  "Pulp Fiction",
+  "Quentin Tarantino",
+  "drama",
+  1994,
+  8.9
+);
+
+console.log(pulpFiction.overview);
